@@ -8,10 +8,11 @@ import { Trip } from './models/trip';
 export class AppComponent {
   //title = 'app';
   trip: Trip = {
-    name: 'Super Flights to Mars';
-    price: 18200;
-    duration: '2 Earth Years';
-    description: 'Race through the Solar System to reach the Red planet. This flight will take 11 Earth Years for each side of the journey.';
+    name: 'Super Flights to Mars',
+    price: 18200,
+    duration: '2 Earth Years',
+    description: 'Race through the Solar System to reach the Red planet. This flight will take 11 Earth Years for each side of the journey.',
+    url: 'https://mars.nasa.gov/system/downloadable_items/37983_mars-globe-valles-marineris-enhanced.jpg', 
   };
   
 }
