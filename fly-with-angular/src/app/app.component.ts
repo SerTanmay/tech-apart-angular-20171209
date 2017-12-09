@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  trip_name = 'Super Flights to Mars';
+  trip-name = 'Super Flights to Mars';
 }
