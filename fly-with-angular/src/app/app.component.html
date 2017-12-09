@@ -8,6 +8,19 @@
     <button class="btn add-trip-btn" (click)="toggleDisplayMode()">+ Add a Trip</button>
   </div>
 
+  <div class="money-form-container">
+      <div class="form-container">
+        <form class="form-inline" name="money-form">
+          <label for="inputTotalMoney">Total money:</label>
+          <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inputTotalMoney" name="totalMoney" >
+        </form>
+      </div>
+      <div class="remaining-amount-container">
+        Remaining money to book trip: <strong>{{ pendingAmount | currency: "USD" }}</strong>
+      </div>
+    </div>
+
+
   <div *ngIf="!addTripFormMode">
     <div class="trips-list">
       <div class="trip" *ngFor="let trip of trips">
@@ -44,6 +57,11 @@
               <small id="TripNameHelpBlock" class="form-text text-muted">
                 It is best to limit the trip name to about 25 to 30 charatcters.
               </small>
+              <div *ngIf="tripForm.get('name').invalid && (tripForm.get('name').dirty || tripForm.get('name').touched)" class="alert alert-danger">
+                  <div *ngIf="tripForm.get('name').errors['required']">
+                    Name is required.
+                  </div>
+                </div>
             </div>
             <div class="form-group col-md-6">
               <label class="col-form-label" for="formGroupTripCost">Cost</label>
