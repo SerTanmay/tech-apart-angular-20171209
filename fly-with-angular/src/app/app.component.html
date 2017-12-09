@@ -16,15 +16,14 @@
         </div>
         <div class="col-lg-10 col-md-9 col-sm-8 trip-info">
           <div>
-            <div class="trip-name">{{trip_name}}</div>
-            <div class="trip-price">18200</div>
+            <div class="trip-name"> {{trip.name}} </div>
+            <div class="trip-price"> {{trip.price}} </div>
           </div>
-          <div class="trip-duration">2 Earth Years</div>
+          <div class="trip-duration"> {{trip.duration}} </div>
 
           <div class="row trip-description-container">
             <div class="col-md-8 trip-description">
-              Race through the Solar System to reach the Red planet. 
-              This flight will take 11 Earth Years for each side of the journey.
+              {{trip.description}}
             </div>
             <div class="col-md-4">
               <button class="btn btn-lg book-btn">Book Trip</button>
